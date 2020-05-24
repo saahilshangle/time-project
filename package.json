@@ -18,7 +18,8 @@
     "eject": "react-scripts eject",
     "say-hello": "echo 'Hello World'",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "bash-hello": "bash public/hello.sh"
   },
   "eslintConfig": {
     "extends": "react-app"
