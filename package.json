@@ -19,7 +19,8 @@
     "say-hello": "echo 'Hello World'",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "bash-hello": "bash public/hello.sh"
+    "bash-hello": "bash public/hello.sh",
+    "js-add": "node public/add.js"
   },
   "eslintConfig": {
     "extends": "react-app"
