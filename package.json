@@ -20,7 +20,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "bash-hello": "bash public/hello.sh",
-    "js-add": "node public/add.js"
+    "js-add": "node public/add.js",
+    "check-email": "bash public/check_email.sh"
   },
   "eslintConfig": {
     "extends": "react-app"
