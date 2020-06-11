@@ -1,6 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Helpful Link(s): https://www.freecodecamp.org/news/introduction-to-npm-scripts-1dbb2ae01633/, https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction
+Helpful Link(s): 
+  * Express Backend: https://medium.com/@maison.moa/setting-up-an-express-backend-server-for-create-react-app-bc7620b20a61
+  * NPM scripts: https://www.freecodecamp.org/news/introduction-to-npm-scripts-1dbb2ae01633/
+  * Express/Node Info: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction
 
 ## Available Scripts
 
