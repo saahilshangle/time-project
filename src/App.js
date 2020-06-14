@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -16,9 +16,21 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React. Note: src/App.js is where it starts from.
+          Learn React.
         </a>
-      </header>
+      </header> */}
+      <body>
+        <p>Blogging Platform App</p>
+        <a
+          href="https://raddevon.com/articles/10-great-web-development-learning-project-ideas/"
+          className="App-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn more
+        </a><br></br>
+        <button onclick="myFunction()">Create new post</button>
+      </body>
     </div>
   );
 }
