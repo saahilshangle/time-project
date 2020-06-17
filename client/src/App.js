@@ -3,13 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  componentDidMount() {
-    // Call our fetch function below once the component mounts
-    this.callBackendAPI()
-    .then(res => this.setState({ data: res.express }))
-    .catch(err => console.log(err));
+  state = {
+    data: null
   };
-
   // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
   callBackendAPI = async () => {
     const response = await fetch('/express_backend');
@@ -19,6 +15,15 @@ function App() {
     }
     return body;
   };
+
+  function componentDidMount() {
+    // Call our fetch function below once the component mounts
+    this.callBackendAPI()
+    .then(res => this.setState({ data: res.express }))
+    .catch(err => console.log(err));
+  };
+
+  componentDidMount();
   
   return (
     <div className="App">
@@ -47,7 +52,7 @@ function App() {
           Learn more
         </a><br></br>
         <button onclick="myFunction()">Create new post</button>
-        <p className="App-intro">{this.state.data}</p>
+        <p>{this.state.data}</p>
       </body>
     </div>
   );
