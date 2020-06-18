@@ -5,6 +5,13 @@ Helpful Link(s):
   * NPM scripts: https://www.freecodecamp.org/news/introduction-to-npm-scripts-1dbb2ae01633/
   * Express/Node Info: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction
 
+Next Steps:
+1. Figure out how to make a server call from React front-end
+2. Understand differences in a production setup that doesn't use a port (or proxy?)
+3. Check when Node.js got involved and how?
+4. Connect to MongoDB
+5. Probably first, read through the mozilla dev page in its entirety.
+
 ## Available Scripts
 
 In the project directory, you can run:
