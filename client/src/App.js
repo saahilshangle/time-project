@@ -3,27 +3,28 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  state = {
-    data: null
-  };
-  // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
-  callBackendAPI = async () => {
-    const response = await fetch('/express_backend');
-    const body = await response.json();
-    if (response.status !== 200) {
-      throw Error(body.message) 
-    }
-    return body;
-  };
 
-  function componentDidMount() {
-    // Call our fetch function below once the component mounts
-    this.callBackendAPI()
-    .then(res => this.setState({ data: res.express }))
-    .catch(err => console.log(err));
-  };
+  // state = {
+  //   data: null
+  // };
+  // // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
+  // callBackendAPI = async () => {
+  //   const response = await fetch('/express_backend');
+  //   const body = await response.json();
+  //   if (response.status !== 200) {
+  //     throw Error(body.message) 
+  //   }
+  //   return body;
+  // };
 
-  componentDidMount();
+  // function componentDidMount() {
+  //   // Call our fetch function below once the component mounts
+  //   this.callBackendAPI()
+  //   .then(res => this.setState({ data: res.express }))
+  //   .catch(err => console.log(err));
+  // };
+
+  // componentDidMount();
   
   return (
     <div className="App">
@@ -52,7 +53,8 @@ function App() {
           Learn more
         </a><br></br>
         <button onclick="myFunction()">Create new post</button>
-        <p>{this.state.data}</p>
+        <a href="http://localhost:5000/">This is the backend</a>
+        {/* <p>{this.state.data}</p> */}
       </body>
     </div>
   );
