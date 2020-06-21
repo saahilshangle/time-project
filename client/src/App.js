@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import app from '../server';
+//import app from '../server/server';
 
 function App() {
 
@@ -26,6 +26,12 @@ function App() {
   // };
 
   // componentDidMount();
+
+  function myFunction() {
+    let response = fetch("http://localhost:5000/express_backend");
+    return response;
+  }
+
   
   return (
     <div className="App">
@@ -53,7 +59,7 @@ function App() {
         >
           Learn more
         </a><br></br>
-        <button onclick="myFunction()">Create new post</button>
+        <button onclick={myFunction()}>Create new post</button>
         <a href="http://localhost:5000/">This is the backend</a>
         {/* <p>{this.state.data}</p> */}
       </body>
