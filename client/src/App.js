@@ -5,18 +5,18 @@ import './App.css';
 
 function App() {
 
-  constructor(props) {
+  function constructor(props) {
     super(props);
     this.state = { apiResponse: "" };
   }
 
-  callAPI() {
+  function callAPI() {
     fetch("http://localhost:5000/express_backend")
         .then(res => res.text())
         .then(res => this.setState({ apiResponse: res }));
   }
 
-  componentWillMount() {
+  function componentWillMount() {
     this.callAPI();
   }
 
