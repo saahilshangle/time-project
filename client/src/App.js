@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-//import app from '../server/server';
 
 class App extends React.Component {
   
@@ -23,8 +22,6 @@ class App extends React.Component {
     this.callAPI();
   }
 
-  //componentWillMount();
-
   myFunction() {
     let response = fetch("http://localhost:5000/express_backend");
     return response;
@@ -34,7 +31,7 @@ class App extends React.Component {
     console.log("I am in render().")
     return (
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
@@ -47,7 +44,7 @@ class App extends React.Component {
           >
             Learn React.
           </a>
-        </header>
+        </header> */}
         <body>
           <p>Blogging Platform App</p>
           <a
