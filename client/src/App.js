@@ -26,13 +26,16 @@ class App extends React.Component {
     let response = fetch("http://localhost:5000/express_backend");
     return response;
   }
-
+  // https://www.w3schools.com/howto/howto_js_topnav.asp
   render() {
     console.log("I am in render().")
     return (
       <div className="App">
-        <header className="Menu-bar">
+        <header className="Nav-bar">
           <p className="logo-font">Saahil's Blog</p>
+          
+          <p>All Posts</p>
+          <p>Profile</p>
         </header>
         <body>
           <a
