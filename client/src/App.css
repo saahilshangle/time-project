@@ -24,6 +24,19 @@
   color: white;
 }
 
+.logo-font {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  /* font-size: 10px; */
+}
+
+.Menu-bar {
+  background-color: #03fc8c;
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+}
+
 .App-link {
   color: #61dafb;
 }

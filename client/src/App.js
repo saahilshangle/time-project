@@ -31,22 +31,10 @@ class App extends React.Component {
     console.log("I am in render().")
     return (
       <div className="App">
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React.
-          </a>
-        </header> */}
+        <header className="Menu-bar">
+          <p className="logo-font">Saahil's Blog</p>
+        </header>
         <body>
-          <p>Blogging Platform App</p>
           <a
             href="https://raddevon.com/articles/10-great-web-development-learning-project-ideas/"
             className="App-link"
