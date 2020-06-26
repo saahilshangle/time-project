@@ -24,6 +24,35 @@
   color: white;
 }
 
+.menu-profile {
+  font-family: Georgia;
+  font-size: 15px;
+  padding-left: 70%;
+  padding-top: 0%;
+}
+
+.menu-all {
+  font-family: Georgia;
+  font-size: 15px;
+  padding-left: 50%;
+  padding-top: 0%;
+}
+
+.logo-font {
+  font-family: cursive, Georgia, 'Times New Roman', Times, serif;
+  padding-left: 20px;
+  /* font-weight: bold; */
+  /* font-size: 10px; */
+}
+
+.Nav-bar {
+  background-color: #b2ebd0;
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+}
+
 .App-link {
   color: #61dafb;
 }

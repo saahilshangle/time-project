@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-//import app from '../server/server';
 
 class App extends React.Component {
   
@@ -23,33 +22,22 @@ class App extends React.Component {
     this.callAPI();
   }
 
-  //componentWillMount();
-
   myFunction() {
     let response = fetch("http://localhost:5000/express_backend");
     return response;
   }
-
+  // https://www.w3schools.com/howto/howto_js_topnav.asp
   render() {
     console.log("I am in render().")
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React.
-          </a>
+        <header className="Nav-bar">
+          <p className="logo-font">Saahil's Blog</p>
+          
+          <p>All Posts</p>
+          <p>Profile</p>
         </header>
         <body>
-          <p>Blogging Platform App</p>
           <a
             href="https://raddevon.com/articles/10-great-web-development-learning-project-ideas/"
             className="App-link"
