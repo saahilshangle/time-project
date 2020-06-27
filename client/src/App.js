@@ -30,12 +30,13 @@ class App extends React.Component {
   render() {
     console.log("I am in render().")
     return (
-      <div className="App">
-        <header className="Nav-bar">
-          <p className="logo-font">Saahil's Blog</p>
-          
-          <p>All Posts</p>
-          <p>Profile</p>
+      <div class="App">
+        <header>
+          <div class="Nav-bar">
+            <h4>Saahil's Blog</h4>
+            <p>All Posts</p>
+            <p>Profile</p>
+          </div>
         </header>
         <body>
           <a
