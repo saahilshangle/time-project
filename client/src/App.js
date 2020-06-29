@@ -7,7 +7,6 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { apiResponse: "First" };
-    console.log("Check constructor log location.")
   }
 
   // eslint-disable-next-line
@@ -15,7 +14,6 @@ class App extends React.Component {
     fetch("http://localhost:5000/express_backend")
         .then(res => res.text())
         .then(res => this.setState({ apiResponse: res }));
-    console.log("Check callApi() function call here.")
   }
 
   componentWillMount() {
@@ -28,7 +26,6 @@ class App extends React.Component {
   }
   // https://www.w3schools.com/howto/howto_js_topnav.asp
   render() {
-    console.log("I am in render().")
     return (
       <div class="App">
         <header>
