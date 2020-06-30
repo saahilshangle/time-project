@@ -44,7 +44,6 @@ class App extends React.Component {
           >
             Learn more
           </a><br></br>
-          {/* <button onclick={myFunction}>Create new post</button> */}
           <a href="http://localhost:5000/">This is the backend</a>
           <p>{this.state.apiResponse}</p>
         </body>
