@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 class App extends React.Component {
@@ -24,30 +24,22 @@ class App extends React.Component {
     let response = fetch("http://localhost:5000/express_backend");
     return response;
   }
-  // https://www.w3schools.com/howto/howto_js_topnav.asp
+
   render() {
     return (
       <div class="App">
         <header>
           <div class="Nav-bar">
+            {/* <p>Test</p> */}
             <h4>Saahil's Blog</h4>
             <div class="Nav-bar-right">
-              <a>Your Posts</a>
-              <a>Profile</a>
-              <a>Home</a>
+              <a href="/">Your Posts</a>
+              <a href="/">Profile</a>
+              <a href="/">Home</a>
             </div>
           </div>
         </header>
         <body>
-          <a
-            href="https://raddevon.com/articles/10-great-web-development-learning-project-ideas/"
-            className="App-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn more
-          </a><br></br>
-          <a href="http://localhost:5000/">This is the backend</a>
           <p>{this.state.apiResponse}</p>
         </body>
       </div>
