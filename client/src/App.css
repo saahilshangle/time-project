@@ -27,22 +27,27 @@
 .Nav-bar {
   background-color: #b2ebd0;
   height: 7vh;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 2vmin); */
   overflow: hidden;
+}
+
+.Nav-bar-right {
+  float: right;
 }
 
 .Nav-bar h4 {
   font-family: cursive, Georgia, 'Times New Roman', Times, serif;
-  padding-left: 20px;
+  /* padding-left: 20px; */
   font-weight: normal;
 }
 
-.Nav-bar p {
+.Nav-bar a {
   float: right;
-  padding: 14px 16px;
-  font-size: 17px;
+  position: right;
+  /* padding: 14px 16px;
+  font-size: 17px; */
 }
 
 .App-link {
