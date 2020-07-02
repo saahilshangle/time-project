@@ -31,8 +31,11 @@ class App extends React.Component {
         <header>
           <div class="Nav-bar">
             <h4>Saahil's Blog</h4>
-            <p>All Posts</p>
-            <p>Profile</p>
+            <div class="Nav-bar-right">
+              <a>Your Posts</a>
+              <a>Profile</a>
+              <a>Home</a>
+            </div>
           </div>
         </header>
         <body>
