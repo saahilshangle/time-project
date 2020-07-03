@@ -5,9 +5,10 @@
 .Nav-bar {
   background-color: #b2ebd0;
   height: 7vh;
-  display: flex;
-  align-items: center;
+  /* display: flex; */
+  /* align-items: center; */
   overflow: hidden;
+  /* white-space: nowrap; */
 }
 
 .Nav-bar h4 {
@@ -17,13 +18,14 @@
 }
 
 .Nav-bar a {
-  float: right;
-  position: right;
+  float: left;
+  /* position: right; */
   padding-right: 16px;
   font-size: 17px;
 }
 
 .Nav-bar-right {
+  background-color: #FF0000;
   float: right;
-  padding-left: 370px;
+  /* padding-right: 60px; */
 }

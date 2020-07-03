@@ -27,7 +27,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div class="App">
+      <div>
         <header>
           <div class="Nav-bar">
             {/* <p>Test</p> */}
@@ -39,7 +39,7 @@ class App extends React.Component {
             </div>
           </div>
         </header>
-        <body>
+        <body class="App">
           <p>{this.state.apiResponse}</p>
         </body>
       </div>
