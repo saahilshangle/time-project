@@ -25,19 +25,34 @@ class App extends React.Component {
     return response;
   }
 
+  // navSlide() {
+  //   const burger = document.querySelector('.burger');
+  //   const nav = document.querySelector('.nav-links');
+
+  //   burger.addEventListener('click', () => {
+  //     nav.classListtoggle('.nav-active');
+  //   });
+  // }
+
+  // https://youtu.be/gXkqy0b4M5g?t=1202 Help here. Figure out function calls in React.
   render() {
     return (
       <div>
         <header>
-          <div class="Nav-bar">
-            {/* <p>Test</p> */}
+          <nav>
             <h4>Saahil's Blog</h4>
-            <div class="Nav-bar-right">
-              <a href="/">Your Posts</a>
-              <a href="/">Profile</a>
-              <a href="/">Home</a>
+            <ul class="nav-links">
+                <li><a href="/">Your Posts</a></li>
+                <li><a href="/">Profile</a></li>
+                <li><a href="/">Home</a></li>
+            </ul>
+            <div class="burger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
             </div>
-          </div>
+          </nav>
+          {/* {this.navSlide()} */}
         </header>
         <body class="App">
           <p>{this.state.apiResponse}</p>
