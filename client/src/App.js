@@ -25,14 +25,14 @@ class App extends React.Component {
     return response;
   }
 
-  // navSlide() {
-  //   const burger = document.querySelector('.burger');
-  //   const nav = document.querySelector('.nav-links');
+  navSlide() {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
 
-  //   burger.addEventListener('click', () => {
-  //     nav.classListtoggle('.nav-active');
-  //   });
-  // }
+    burger.addEventListener('click', () => {
+      nav.classListtoggle('.nav-active')
+    });
+  }
 
   // https://youtu.be/gXkqy0b4M5g?t=1202 Help here. Figure out function calls in React.
   render() {
