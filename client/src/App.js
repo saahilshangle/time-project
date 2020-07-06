@@ -52,7 +52,7 @@ class App extends React.Component {
               <div class="line3"></div>
             </div>
           </nav>
-          {/* {this.navSlide()} */}
+          {this.navSlide}
         </header>
         <body class="App">
           <p>{this.state.apiResponse}</p>
