@@ -1,6 +1,18 @@
-.App {
+.home {
   text-align: center;
   background-color: lightblue;
+  height: 100vh;
+  position: absolute;
+  width: 25vh;
+}
+
+.right-home {
+  text-align: center;
+  background-color: lightblue;
+  height: 100vh;
+  position: absolute;
+  width: 25vh;
+  transform: translateX(91vh);
 }
 
 nav {
