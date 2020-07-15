@@ -1,3 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  height: 100vh;
+}
+
+.left, .right {
+  width: 25%;
+  background-color: #aaa;
+}
+
+.middle {
+  width: 50%;
+}
+
 .home {
   text-align: center;
   background-color: lightblue;
@@ -12,7 +37,7 @@
   height: 100vh;
   position: absolute;
   width: 25vh;
-  transform: translateX(91vh);
+  transform: translateX(191%);
 }
 
 nav {

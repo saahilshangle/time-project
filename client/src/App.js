@@ -54,11 +54,14 @@ class App extends React.Component {
           </nav>
           {this.navSlide}
         </header>
-        <body class="home">
-          <div>
+        <body class="row">
+          <div class="column left">
             <p>{this.state.apiResponse}</p>
           </div>
-          <div class="right-home">
+          <div class="column middle">
+            <p>Middle</p>
+          </div>
+          <div class="column right">
             <p>Right side</p>
           </div>
         </body>
