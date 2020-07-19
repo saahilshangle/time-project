@@ -6,7 +6,7 @@ class App extends React.Component {
   
   constructor(props) {
     super(props);
-    this.state = { apiResponse: "First" };
+    this.state = { apiResponse: "First", mongoResponse: "Second" };
   }
 
   // eslint-disable-next-line
@@ -16,8 +16,15 @@ class App extends React.Component {
         .then(res => this.setState({ apiResponse: res }));
   }
 
+  callDatabase() {
+    fetch("http://localhost:5000/mongo_backend")
+        .then(res => res.text())
+        .then(res =>this.setState({ mongoResponse: res}));
+  }
+
   componentWillMount() {
     this.callAPI();
+    this.callDatabase();
   }
 
   myFunction() {
@@ -40,7 +47,7 @@ class App extends React.Component {
       <div>
         <header>
           <nav>
-            <h4>Saahil's Blog</h4>
+            <h4>TIM: Time is Money</h4>
             <ul class="nav-links">
                 <li><a href="/">Your Posts</a></li>
                 <li><a href="/">Profile</a></li>
@@ -56,13 +63,13 @@ class App extends React.Component {
         </header>
         <body class="row">
           <div class="column left">
-            <p>{this.state.apiResponse}</p>
           </div>
           <div class="column middle">
-            <p>Middle</p>
+            <p>{this.state.apiResponse}</p>
+            <p>{this.state.mongoResponse}</p>
+            <p>Sell your time! College application review, tutoring, lessons, consultations, and more!</p>
           </div>
           <div class="column right">
-            <p>Right side</p>
           </div>
         </body>
       </div>
