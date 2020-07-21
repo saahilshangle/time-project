@@ -22,7 +22,8 @@ app.get('/express_backend', (req, res) => {
 app.get('/mongo_backend', (req, res) => {
     // list clusters in mongodb atlas
     connection.main();
-    res.send('MONGO IS CONNECTED')
+    //res.send('MONGO IS CONNECTED')
+    res.send(connection.writeTest())
 })
 
 module.exports = app;
