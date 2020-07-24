@@ -41,7 +41,6 @@ class App extends React.Component {
     });
   }
 
-  // https://youtu.be/gXkqy0b4M5g?t=1202 Help here. Figure out function calls in React.
   render() {
     return (
       <div>
