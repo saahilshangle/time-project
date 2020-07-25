@@ -28,7 +28,9 @@ async function main() {
     }
 }
 
-//main().catch(console.error);
+function writeTest() {
+    return "anothertest";
+}
 
 /**
  * Print the names of all available databases
@@ -42,4 +44,4 @@ async function listDatabases(client) {
     //databasesList.databases.forEach(db => console.log(` - ${db.name}`));
 };
 
-module.exports = { main };
+module.exports = { main, writeTest };

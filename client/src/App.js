@@ -1,5 +1,7 @@
 import React from 'react';
 //import logo from './logo.svg';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 
 class App extends React.Component {
@@ -41,7 +43,6 @@ class App extends React.Component {
     });
   }
 
-  // https://youtu.be/gXkqy0b4M5g?t=1202 Help here. Figure out function calls in React.
   render() {
     return (
       <div>
