@@ -20,11 +20,11 @@ export default class Navigation extends React.Component {
         return (
             <header>
                 <nav>
-                    <h4>TIM: Time is Money</h4>
+                    <h4>Time</h4>
                     <ul class="nav-links">
-                        <li><a href="/">Your Posts</a></li>
-                        <li><a href="/">Profile</a></li>
                         <li><a href="/">Home</a></li>
+                        <li><a href="/your-posts">Your Posts</a></li>
+                        <li><a href="/profile">Profile</a></li>
                     </ul>
                     <div class="burger">
                     <div class="line1"></div>
