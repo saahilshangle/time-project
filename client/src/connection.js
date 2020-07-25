@@ -1,10 +1,7 @@
+const { App } = require('./App.js');
 const { MongoClient } = require('mongodb');
 
-class Connection {
-    
-    constructor(props) {
-        super(props);
-    }
+export default class Connection {
     
     async main() {
         /**
@@ -12,19 +9,19 @@ class Connection {
          * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
          */
         const uri = "mongodb+srv://test-1:testing-only@cluster0-saiku.mongodb.net/sample-airbnb?retryWrites=true&w=majority";
-    
+        
         /**
          * The Mongo Client you will use to interact with your database
          * See https://mongodb.github.io/node-mongodb-native/3.3/api/MongoClient.html for more details
          */
         const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-    
+        
         try {
             // Connect to the MongoDB cluster
             await client.connect();
     
             // Make the appropriate DB calls
-            await listDatabases(client);
+            await this.listDatabases(client);
         } catch (e) {
             console.error(e);
         } finally {
@@ -43,7 +40,7 @@ class Connection {
      * @param {MongoClient} client A MongoClient that is connected to a cluster
      */
     async listDatabases(client) {
-        databasesList = await client.db().admin().listDatabases();
+        const databasesList = await client.db().admin().listDatabases();
     
         console.log("Databases:");
         console.log(databasesList.databases);
@@ -51,4 +48,4 @@ class Connection {
     };
 }
 
-module.exports = { main, writeTest };
+//module.exports = Connection;
