@@ -21,7 +21,7 @@ export default class App extends React.Component {
 
 const Main = () => (
   <Switch>
-    <Route exact path='/my-app'><Redirect to='/my-app/home' /></Route>
+    <Route path='/my-app'><Redirect to='/my-app/home' /></Route>
     <Route exact path='/my-app/home' component={Home}></Route>
     <Route exact path='/my-app/your-posts' component={YourPosts}></Route>
     <Route exact path='/my-app/profile' component={Profile}></Route>
