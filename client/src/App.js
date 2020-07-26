@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 // Additional views
 import Navigation from './views/navigation.js';
@@ -21,8 +21,9 @@ export default class App extends React.Component {
 
 const Main = () => (
   <Switch>
+    <Route exact path='/'><Redirect to='/home' /></Route>
+    <Route exact path='/home' component={Home}></Route>
     <Route exact path='/your-posts' component={YourPosts}></Route>
     <Route exact path='/profile' component={Profile}></Route>
-    <Route exact path='/' component={Home}></Route>
   </Switch>
 );

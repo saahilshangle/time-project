@@ -1,10 +1,12 @@
 const { MongoClient } = require('mongodb');
+const dblist = [];
 
 async function main() {
     /**
      * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
      * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
      */
+    
     const uri = "mongodb+srv://test-1:testing-only@cluster0-saiku.mongodb.net/sample-airbnb?retryWrites=true&w=majority";
 
     /**
@@ -19,17 +21,18 @@ async function main() {
 
         // Make the appropriate DB calls
         await listDatabases(client);
+        
     } catch (e) {
         console.error(e);
     } finally {
         // Close the connection to the MongoDB cluster
         await client.close();
-
+        
     }
 }
 
 function writeTest() {
-    return "anothertest";
+    return dblist.toString();
 }
 
 /**
@@ -41,7 +44,7 @@ async function listDatabases(client) {
 
     console.log("Databases:");
     console.log(databasesList.databases);
-    //databasesList.databases.forEach(db => console.log(` - ${db.name}`));
+    databasesList.databases.forEach(db => dblist.push(` - ${db.name}`));
 };
 
 module.exports = { main, writeTest };
