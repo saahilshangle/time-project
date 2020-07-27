@@ -23,9 +23,9 @@ export default class Navigation extends React.Component {
                 <nav>
                     <h4>Time</h4>
                     <ul class="nav-links">
-                        <li><Link to="/home">Home</Link></li>
-                        <li><Link to="/your-posts">Your Posts</Link></li>
-                        <li><Link to="/profile">Profile</Link></li>
+                        <li><Link to="/my-app/home">Home</Link></li>
+                        <li><Link to="/my-app/your-posts">Your Posts</Link></li>
+                        <li><Link to="/my-app/profile">Profile</Link></li>
                     </ul>
                     <div class="burger">
                     <div class="line1"></div>
