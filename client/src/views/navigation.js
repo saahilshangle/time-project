@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './../App.css';
 
 export default class Navigation extends React.Component {
@@ -22,9 +23,9 @@ export default class Navigation extends React.Component {
                 <nav>
                     <h4>Time</h4>
                     <ul class="nav-links">
-                        <li><a href="/my-app/home">Home</a></li>
-                        <li><a href="/my-app/your-posts">Your Posts</a></li>
-                        <li><a href="/my-app/profile">Profile</a></li>
+                        <li><a href="/home">Home</a></li>
+                        <li><Link to="/your-posts">Your Posts</Link></li>
+                        <li><Link to="/profile">Profile</Link></li>
                     </ul>
                     <div class="burger">
                     <div class="line1"></div>
