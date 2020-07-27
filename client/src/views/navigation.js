@@ -23,7 +23,7 @@ export default class Navigation extends React.Component {
                 <nav>
                     <h4>Time</h4>
                     <ul class="nav-links">
-                        <li><a href="/home">Home</a></li>
+                        <li><Link to="/home">Home</Link></li>
                         <li><Link to="/your-posts">Your Posts</Link></li>
                         <li><Link to="/profile">Profile</Link></li>
                     </ul>
