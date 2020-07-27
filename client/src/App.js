@@ -24,11 +24,11 @@ const Main = () => (
   <BrowserRouter path={process.env.PUBLIC_URL}>
     <Switch>
       {/* Below line only for local development environment. */}
-      <Route exact path='/'><Redirect to='home' /></Route>
+      <Route exact path='/'><Redirect to='my-app/home' /></Route>
       {/* <Route exact path='/my-app'><Redirect to='/my-app/home' /></Route> */}
-      <Route exact path='/home' component={Home} />
-      <Route exact path='/your-posts' component={YourPosts} />
-      <Route exact path='/profile' component={Profile} />
+      <Route exact path='/my-app/home' component={Home} />
+      <Route exact path='/my-app/your-posts' component={YourPosts} />
+      <Route exact path='/my-app/profile' component={Profile} />
     </Switch>
   </BrowserRouter>
 );
