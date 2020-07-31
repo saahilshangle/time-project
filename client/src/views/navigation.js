@@ -11,7 +11,7 @@ export default class Navigation extends React.Component {
     navSlide() {
         const burger = document.querySelector('.burger');
         const nav = document.querySelector('.nav-links');
-    
+        console.log("Is is working..kinda");
         burger.addEventListener('click', () => {
           nav.classList.toggle('.nav-active')
         });
@@ -22,15 +22,15 @@ export default class Navigation extends React.Component {
             <header>
                 <nav>
                     <h4>Time</h4>
-                    <ul class="nav-links">
+                    <ul className="nav-links">
                         <li><Link to="/my-app/home">Home</Link></li>
                         <li><Link to="/my-app/your-posts">Your Posts</Link></li>
                         <li><Link to="/my-app/profile">Profile</Link></li>
                     </ul>
-                    <div class="burger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
+                    <div className="burger">
+                    <div className="line1"></div>
+                    <div className="line2"></div>
+                    <div className="line3"></div>
                     </div>
                 </nav>
                 {this.navSlide}

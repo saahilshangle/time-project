@@ -36,15 +36,15 @@ export default class Home extends React.Component {
 
     render() {
         return (
-            <body class="row">
-                <div class="column left">
+            <body className="row">
+                <div className="column left">
                 </div>
-                <div class="column middle">
+                <div className="column middle">
                     <p>{this.state.apiResponse}</p>
                     <p>{this.state.mongoResponse}</p>
                     <p>Sell your time! College application review, tutoring, lessons, consultations, and more!</p>
                 </div>
-                <div class="column right">
+                <div className="column right">
                 </div>
             </body>
         );
