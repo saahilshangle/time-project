@@ -27,11 +27,15 @@ export default class Home extends React.Component {
     componentWillMount() {
         this.callAPI();
         this.callDatabase();
+        this.myFunction();
     }
 
     myFunction() {
-        let response = fetch("http://localhost:5000/express_backend");
-        return response;
+        // let response = fetch("http://localhost:5000/express_backend");
+        // return response;
+        console.log("testing12345");
+        // This has more info on event listeners
+        // https://reactjs.org/docs/handling-events.html
     }
 
     render() {
@@ -43,6 +47,8 @@ export default class Home extends React.Component {
                     <p>{this.state.apiResponse}</p>
                     <p>{this.state.mongoResponse}</p>
                     <p>Sell your time! College application review, tutoring, lessons, consultations, and more!</p>
+                    <input type="text" id="myText"/>
+                    {this.myFunction()}
                 </div>
                 <div className="column right">
                 </div>
