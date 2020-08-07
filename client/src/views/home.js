@@ -27,7 +27,7 @@ export default class Home extends React.Component {
     componentWillMount() {
         this.callAPI();
         this.callDatabase();
-        this.myFunction();
+        //this.myFunction();
     }
 
     myFunction() {
@@ -35,7 +35,7 @@ export default class Home extends React.Component {
         // return response;
         console.log("testing12345");
         // This has more info on event listeners
-        // https://reactjs.org/docs/handling-events.html
+        // https://reactjs.org/docs/forms.html
     }
 
     render() {
