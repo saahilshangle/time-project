@@ -1,4 +1,4 @@
-****SAAHIL'S BLOG****<br>
+****TIM: Time is Money****<br>
 *A user guide and architecture overview.*
 
 
