@@ -8,7 +8,8 @@ export default class Home extends React.Component {
         this.state = { 
             apiResponse: "First", 
             mongoResponse: "Second",
-            textBox: "hmm"
+            textBox: "hmm",
+            textResponse: "nothing so far"
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -21,6 +22,7 @@ export default class Home extends React.Component {
     handleSubmit(event) {
         alert(this.state.textBox);
         event.preventDefault();
+        this.callTextBox(this.state.textBox);
     }
 
     // eslint-disable-next-line
@@ -33,7 +35,17 @@ export default class Home extends React.Component {
     callDatabase() {
         fetch("http://localhost:5000/mongo_backend")
             .then(res => res.text())
-            .then(res =>this.setState({ mongoResponse: res}));
+            .then(res => this.setState({ mongoResponse: res }));
+    }
+
+    callTextBox(content) {
+        fetch("https://localhost:5000/text_input", {
+            method: "post",
+            headers: { "Content-type": "application/text"},
+            body: content
+        })
+            .then(res => res.text())
+            .then(res => this.setState({ textResponse: res }));
     }
 
     componentWillMount() {
@@ -66,6 +78,7 @@ export default class Home extends React.Component {
                         </label>
                         <input type="submit" value="Submit" />
                     </form>
+                    <p>{this.state.textResponse}</p>
                 </div>
                 <div className="column right">
                 </div>

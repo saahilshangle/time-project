@@ -19,6 +19,10 @@ app.get('/express_backend', (req, res) => {
     res.send('YOUR EXPRESS BACKEND IS CONNECTED TO REACT')
 });
 
+app.get('/text_input', (req, res) => {
+    res.send(req)
+});
+
 app.get('/mongo_backend', (req, res) => {
     // list clusters in mongodb atlas
     connection.main();

@@ -11,7 +11,7 @@
 .column {
   float: left;
   padding: 10px;
-  height: 100vh;
+  height: 93vh;
 }
 
 .left, .right {
@@ -27,7 +27,7 @@
 .home {
   text-align: center;
   background-color: rgb(255, 255, 255);
-  height: 100vh;
+  height: 93vh;
   position: absolute;
   width: 25vh;
 }
@@ -35,7 +35,7 @@
 .right-home {
   text-align: center;
   background-color: rgb(255, 255, 255);
-  height: 100vh;
+  height: 93vh;
   position: absolute;
   width: 25vh;
   transform: translateX(191%);
