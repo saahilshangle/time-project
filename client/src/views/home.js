@@ -7,8 +7,20 @@ export default class Home extends React.Component {
         super(props);
         this.state = { 
             apiResponse: "First", 
-            mongoResponse: "Second" 
+            mongoResponse: "Second",
+            textBox: "hmm"
         };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({textBox: event.target.value});
+    }
+
+    handleSubmit(event) {
+        alert(this.state.textBox);
+        event.preventDefault();
     }
 
     // eslint-disable-next-line
@@ -34,7 +46,7 @@ export default class Home extends React.Component {
         // let response = fetch("http://localhost:5000/express_backend");
         // return response;
         console.log("testing12345");
-        // This has more info on event listeners
+        // This has more info on event listeners KEEP THIS
         // https://reactjs.org/docs/forms.html
     }
 
@@ -47,8 +59,13 @@ export default class Home extends React.Component {
                     <p>{this.state.apiResponse}</p>
                     <p>{this.state.mongoResponse}</p>
                     <p>Sell your time! College application review, tutoring, lessons, consultations, and more!</p>
-                    <input type="text" id="myText"/>
-                    {this.myFunction()}
+                    <form onSubmit={this.handleSubmit}>
+                        <label>
+                            Name:
+                            <input type="text" value={this.state.value} onChange={this.handleChange}/>
+                        </label>
+                        <input type="submit" value="Submit" />
+                    </form>
                 </div>
                 <div className="column right">
                 </div>
