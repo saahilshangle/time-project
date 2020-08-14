@@ -11,7 +11,7 @@ export default class Navigation extends React.Component {
     navSlide() {
         const burger = document.querySelector('.burger');
         const nav = document.querySelector('.nav-links');
-        console.log("Is is working..kinda");
+        console.log("Nav slide is is working..kinda");
         burger.addEventListener('click', () => {
           nav.classList.toggle('.nav-active')
         });

@@ -1,5 +1,7 @@
 const express = require('express');
 const cors = require('cors');
+//const bodyParser = require('body-parser');
+//const router = express.Router;
 const app = express();
 const connection = require('./connection.js');
 const port = process.env.PORT || 5000;
@@ -7,7 +9,7 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 
 // console.log that your server is up and running
-app.listen(port, () => console.log('Listening on port ${port}'));
+app.listen(port, () => console.log('Listening on port ' + port));
 
 // check server functionality
 app.get('/', (req, res) => {
@@ -20,7 +22,9 @@ app.get('/express_backend', (req, res) => {
 });
 
 app.get('/text_input', (req, res) => {
-    res.send(req)
+    var qname = req.query.name || "";
+    res.send(qname);
+    console.log("Something was psosted somewhere");
 });
 
 app.get('/mongo_backend', (req, res) => {

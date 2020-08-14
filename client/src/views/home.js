@@ -9,7 +9,7 @@ export default class Home extends React.Component {
             apiResponse: "First", 
             mongoResponse: "Second",
             textBox: "hmm",
-            textResponse: "nothing so far"
+            textResponse: "IDK"
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,7 +20,7 @@ export default class Home extends React.Component {
     }
 
     handleSubmit(event) {
-        alert(this.state.textBox);
+        //alert(this.state.textBox);
         event.preventDefault();
         this.callTextBox(this.state.textBox);
     }
@@ -39,13 +39,9 @@ export default class Home extends React.Component {
     }
 
     callTextBox(content) {
-        fetch("https://localhost:5000/text_input", {
-            method: "post",
-            headers: { "Content-type": "application/text"},
-            body: content
-        })
+        fetch("http://localhost:5000/text_input?name=" + content)
             .then(res => res.text())
-            .then(res => this.setState({ textResponse: res }));
+            .then(res => this.setState({ textResponse: res }))
     }
 
     componentWillMount() {
@@ -78,7 +74,7 @@ export default class Home extends React.Component {
                         </label>
                         <input type="submit" value="Submit" />
                     </form>
-                    <p>{this.state.textResponse}</p>
+                    <p>Server says your name is: {this.state.textResponse}</p>
                 </div>
                 <div className="column right">
                 </div>
