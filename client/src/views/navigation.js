@@ -8,12 +8,13 @@ export default class Navigation extends React.Component {
         this.navSlide();
     }
 
+    // https://stackoverflow.com/questions/57454279/im-having-a-problem-triggering-this-classlist-toggle-in-react
     navSlide() {
         const burger = document.querySelector('.burger');
         const nav = document.querySelector('.nav-links');
-        console.log("Nav slide is is working..kinda");
         burger.addEventListener('click', () => {
-          nav.classList.toggle('.nav-active')
+          nav.classList.toggle('.nav-active');
+          console.log("Nav slide is is working..kinda");
         });
       }
 
@@ -28,12 +29,11 @@ export default class Navigation extends React.Component {
                         <li><Link to="/my-app/profile">Profile</Link></li>
                     </ul>
                     <div className="burger">
-                    <div className="line1"></div>
-                    <div className="line2"></div>
-                    <div className="line3"></div>
+                        <div className="line1"></div>
+                        <div className="line2"></div>
+                        <div className="line3"></div>
                     </div>
                 </nav>
-                {this.navSlide}
             </header>
         );
     }

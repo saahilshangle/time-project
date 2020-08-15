@@ -64,17 +64,17 @@ export default class Home extends React.Component {
                 <div className="column left">
                 </div>
                 <div className="column middle">
-                    <p>{this.state.apiResponse}</p>
-                    <p>{this.state.mongoResponse}</p>
+                    {/* <p>{this.state.apiResponse}</p> */}
+                    {/* <p>{this.state.mongoResponse}</p> */}
                     <p>Sell your time! College application review, tutoring, lessons, consultations, and more!</p>
-                    <form onSubmit={this.handleSubmit}>
+                    {/* <form onSubmit={this.handleSubmit}>
                         <label>
                             Name:
                             <input type="text" value={this.state.value} onChange={this.handleChange}/>
                         </label>
                         <input type="submit" value="Submit" />
                     </form>
-                    <p>Server says your name is: {this.state.textResponse}</p>
+                    <p>Server says your name is: {this.state.textResponse}</p> */}
                 </div>
                 <div className="column right">
                 </div>

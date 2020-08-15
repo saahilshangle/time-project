@@ -8,9 +8,7 @@ export default class Profile extends React.Component {
 
     render() {
         return (
-            <body>
-                <h1>This is my profile.</h1>
-            </body>
+            <h1>This is my profile.</h1>
         );
     }
 }

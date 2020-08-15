@@ -41,7 +41,9 @@ function writeTest() {
  */
 async function listDatabases(client) {
     databasesList = await client.db().admin().listDatabases();
-
+    for (i = 1; i < dblist.length; i++) {
+        dblist.pop();
+    }
     console.log("Databases:");
     console.log(databasesList.databases);
     databasesList.databases.forEach(db => dblist.push(` - ${db.name}`));

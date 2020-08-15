@@ -90,17 +90,18 @@ nav h4 {
   margin: 5px;
 }
 
+/* https://youtu.be/gXkqy0b4M5g?t=1202 */
 @media screen and (max-width: 760px) {
-  body {
+  header, body {
     overflow-x: hidden;
   }
 
   .nav-links {
     position: absolute;
     right: 0px;
-    height: 94vh;
-    top: 4vh;
-    background-color: #ffffff;
+    height: 93vh;
+    top: 4.6vh;
+    background-color: #5D4954;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,9 +110,9 @@ nav h4 {
     transition: transform 0.5s ease-in;
   }
 
-  .nav-links li {
+  /* .nav-links li {
     opacity: 0;
-  }
+  } */
 
   .burger {
     display: block;
@@ -119,5 +120,5 @@ nav h4 {
 }
 
 .nav-active {
-  transform: translateX(0%)
+  transform: translateX(0%);
 }
