@@ -9,7 +9,7 @@ export default class Home extends React.Component {
             apiResponse: "First", 
             mongoResponse: "Second",
             textBox: "hmm",
-            textResponse: "IDK"
+            textResponse: "[not entered or server not running]"
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -61,23 +61,24 @@ export default class Home extends React.Component {
     render() {
         return (
             <body className="row">
-                <div className="column left">
-                </div>
+                <div className="column left" />
                 <div className="column middle">
                     {/* <p>{this.state.apiResponse}</p> */}
                     {/* <p>{this.state.mongoResponse}</p> */}
-                    <p>Sell your time! College application review, tutoring, lessons, consultations, and more!</p>
-                    {/* <form onSubmit={this.handleSubmit}>
-                        <label>
-                            Name:
-                            <input type="text" value={this.state.value} onChange={this.handleChange}/>
-                        </label>
-                        <input type="submit" value="Submit" />
-                    </form>
-                    <p>Server says your name is: {this.state.textResponse}</p> */}
+                    <br></br>
+                    <div className="h-content">
+                        <p>Sell your time! College application review, tutoring, lessons, consultations, and more!</p>
+                        <form onSubmit={this.handleSubmit}>
+                            <label>
+                                Name: <space />
+                                <input type="text" value={this.state.value} onChange={this.handleChange}/>
+                            </label>
+                            <input type="submit" value="Submit" />
+                        </form>
+                        <p>Your name is: {this.state.textResponse}</p>
+                    </div>
                 </div>
-                <div className="column right">
-                </div>
+                <div className="column right" />
             </body>
         );
     }
