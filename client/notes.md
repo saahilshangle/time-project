@@ -5,9 +5,6 @@ Helpful Link(s):
   * NPM scripts: https://www.freecodecamp.org/news/introduction-to-npm-scripts-1dbb2ae01633/
   * Express/Node Info: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction
 
-Next Steps:
-1. Figure out how to make a server call from React front-end
-
 ## Available Scripts
 
 In the project directory, you can run:
