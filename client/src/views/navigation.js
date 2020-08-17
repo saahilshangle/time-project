@@ -24,9 +24,9 @@ export default class Navigation extends React.Component {
                 <nav>
                     <h4>Time Project</h4>
                     <ul className="nav-links">
-                        <li><Link to="/my-app/home">Home</Link></li>
-                        <li><Link to="/my-app/your-posts">Your Posts</Link></li>
-                        <li><Link to="/my-app/profile">Profile</Link></li>
+                        <li><Link to="/time-project/home">Home</Link></li>
+                        <li><Link to="/time-project/your-posts">Your Posts</Link></li>
+                        <li><Link to="/time-project/profile">Profile</Link></li>
                     </ul>
                     <div className="burger">
                         <div className="line1"></div>

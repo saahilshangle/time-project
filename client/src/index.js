@@ -14,10 +14,10 @@ ReactDOM.render(
   <Router>
     <Navigation />
     <Switch>
-      <Route exact path='/my-app'><Redirect to='/my-app/home' /></Route>
-      <Route exact path='/my-app/home' component={Home} />
-      <Route exact path='/my-app/your-posts' component={YourPosts} />
-      <Route exact path='/my-app/profile' component={Profile} />
+      <Route exact path='/time-project'><Redirect to='/time-project/home' /></Route>
+      <Route exact path='/time-project/home' component={Home} />
+      <Route exact path='/time-project/your-posts' component={YourPosts} />
+      <Route exact path='/time-project/profile' component={Profile} />
     </Switch>
   </Router>,
   document.getElementById('root')
