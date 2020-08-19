@@ -8,8 +8,15 @@ export default class YourPosts extends React.Component {
 
     render() {
         return (
-            <body>
-                <h1>These are my posts.</h1>
+            <body className="row">
+                <div className="column left" />
+                <div className="column middle">
+                    <br></br>
+                    <div className="h-content">
+                        <p>You currently don't have any posts</p>
+                    </div>
+                </div>
+                <div className="column right" />
             </body>
         );
     }
