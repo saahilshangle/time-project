@@ -8,7 +8,7 @@ export default class Home extends React.Component {
         this.state = { 
             apiResponse: "First", 
             mongoResponse: "Second",
-            textBox: "hmm",
+            textBox: "not entered yet",
             textResponse: "[not entered or server not running]"
         };
         this.handleChange = this.handleChange.bind(this);
