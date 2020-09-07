@@ -10,7 +10,8 @@ export default class Profile extends React.Component {
             apiResponse: "First", 
             mongoResponse: "Second",
             textBox: "not entered yet",
-            textResponse: "[not entered or server not running]"
+            textResponse: "[not entered or server not running]",
+            loggedIn: "You're not signed in."
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -65,15 +66,20 @@ export default class Profile extends React.Component {
                 <div className="p-content">
                     {/* <p>{this.state.apiResponse}</p> */}
                     {/* <p>{this.state.mongoResponse}</p> */}
-                    <h3>This is my profile.</h3>
+                    <h3>{this.state.loggedIn}</h3>
+                    <p>Login below</p>
                     <form onSubmit={this.handleSubmit}>
                         <label>
-                            Name: <space />
+                            Username: <space />
                             <input type="text" value={this.state.value} onChange={this.handleChange}/>
+                            <br />
+                            Password: <space />
+                            <input type="text" value={this.state.value} onChange={this.handleChange}/>
+                            <br />
                         </label>
                         <input type="submit" value="Submit" />
                     </form>
-                    <p>Your name is: {this.state.textResponse}</p>
+                    <p>Number of total logins: {this.state.textResponse}</p>
                 </div>
             </body>
         );
