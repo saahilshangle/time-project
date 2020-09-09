@@ -4,6 +4,7 @@ Helpful Link(s):
   * Express Backend: https://medium.com/@maison.moa/setting-up-an-express-backend-server-for-create-react-app-bc7620b20a61
   * NPM scripts: https://www.freecodecamp.org/news/introduction-to-npm-scripts-1dbb2ae01633/
   * Express/Node Info: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction
+  * https://create-react-app.dev/docs/adding-custom-environment-variables/
 
 ## Available Scripts
 
