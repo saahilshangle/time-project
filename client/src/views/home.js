@@ -3,8 +3,22 @@ import './../App.css';
 
 export default class Home extends React.Component {
     
-    componentDidMount() {
+    constructor(props) {
+        super(props);
+        this.state = { 
+            loggedIn: "Not logged in."
+        };
     }
+
+    checkLoggedIn() {
+        return this.state.loggedIn;
+    }
+    
+    componentDidMount() {
+        this.checkLoggedIn();
+    }
+
+
 
     render() {
         return (
@@ -12,7 +26,8 @@ export default class Home extends React.Component {
                 <div className="column left" />
                 <div className="column middle">
                     <br></br>
-                    <p className="temp">Sell your time! College application review, tutoring, lessons, consultations, and more!</p>
+                    <p className="temp">{this.state.loggedIn}</p>
+                    
                 </div>
                 <div className="column right" />
             </body>
