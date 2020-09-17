@@ -8,7 +8,7 @@ export default class Profile extends React.Component {
         super(props);
         this.state = { 
             apiResponse: "First", 
-            mongoResponse: "Second",
+            mongoResponse: "Data directly from MongoDB will appear here.",
             textBox: "not entered yet",
             textResponse: "[not entered or server not running]",
             loggedIn: "You're not signed in."
@@ -65,7 +65,6 @@ export default class Profile extends React.Component {
             <body>
                 <div className="p-content">
                     {/* <p>{this.state.apiResponse}</p> */}
-                    {/* <p>{this.state.mongoResponse}</p> */}
                     <h3>{this.state.loggedIn}</h3>
                     <p>Login below</p>
                     <form onSubmit={this.handleSubmit}>
@@ -80,6 +79,7 @@ export default class Profile extends React.Component {
                         <input type="submit" value="Submit" />
                     </form>
                     <p>Number of total logins: {this.state.textResponse}</p>
+                    <p>{this.state.mongoResponse}</p>
                 </div>
             </body>
         );

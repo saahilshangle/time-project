@@ -24,7 +24,7 @@ app.get('/express_backend', (req, res) => {
 app.get('/text_input', (req, res) => {
     var qname = req.query.name || "";
     res.send(qname);
-    console.log("Something was psosted somewhere");
+    console.log("Something was posted somewhere");
 });
 
 app.get('/mongo_backend', (req, res) => {
