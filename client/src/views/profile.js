@@ -9,22 +9,30 @@ export default class Profile extends React.Component {
         this.state = { 
             apiResponse: "First", 
             mongoResponse: "Data directly from MongoDB will appear here.",
-            textBox: "not entered yet",
-            textResponse: "[not entered or server not running]",
+            username: "not entered yet",
+            usernameResponse: "[not entered or server not running]",
+            password: "not entered yet",
+            passwordResponse: "[not entered or server not running]",
             loggedIn: "You're not signed in."
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handlePswd = this.handlePswd.bind(this);
     }
 
     handleChange(event) {
-        this.setState({textBox: event.target.value});
+        this.setState({username: event.target.value});
+    }
+
+    handlePswd(event) {
+        this.setState({password: event.target.value});
     }
 
     handleSubmit(event) {
         //alert(this.state.textBox);
         event.preventDefault();
-        this.callTextBox(this.state.textBox);
+        this.callSubmitUsername(this.state.username);
+        this.callSubmitPassword(this.state.password);
     }
 
     // eslint-disable-next-line
@@ -40,10 +48,16 @@ export default class Profile extends React.Component {
             .then(res => this.setState({ mongoResponse: res }));
     }
 
-    callTextBox(content) {
+    callSubmitUsername(content) {
         fetch("http://localhost:5000/text_input?name=" + content)
             .then(res => res.text())
-            .then(res => this.setState({ textResponse: res }))
+            .then(res => this.setState({ usernameResponse: res }))
+    }
+
+    callSubmitPassword(content) {
+        fetch("http://localhost:5000/text_input?name=" + content)
+            .then(res => res.text())
+            .then(res => this.setState({ passwordResponse: res }))
     }
 
     componentWillMount() {
@@ -73,12 +87,13 @@ export default class Profile extends React.Component {
                             <input type="text" value={this.state.value} onChange={this.handleChange}/>
                             <br />
                             Password: <space />
-                            <input type="text" value={this.state.value} onChange={this.handleChange}/>
+                            <input type="text" value={this.state.value} onChange={this.handlePswd}/>
                             <br />
                         </label>
                         <input type="submit" value="Submit" />
                     </form>
-                    <p>Number of total logins: {this.state.textResponse}</p>
+                    <p>Username entered: {this.state.usernameResponse}</p>
+                    <p>Password entered: {this.state.passwordResponse}</p>
                     <p>{this.state.mongoResponse}</p>
                 </div>
             </body>
