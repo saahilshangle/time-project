@@ -1,7 +1,6 @@
 ****Time Project****<br>
 *A user guide and architecture overview.*
 
-
 *Objective*<br>
 This web app is a matching platform that is a learning exercise for me in the areas of HTML, JavaScript, CSS, React, JSX, Express, Cors, MongoDB, NPM, Git, REST APIs, and more. The functional version will match people who are interested in contracting out their time, and support transactions as well.
 
